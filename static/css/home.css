@@ -68,6 +68,17 @@ header {
     margin-left: 10px;
     cursor: pointer;
 }
+.main-nav .login-link {
+    background-color: #4CAF50; /* Green */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+}
+
+.main-nav .login-link:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
 
 .search-bar button i {
     font-size: 18px; /* Adjust icon size */

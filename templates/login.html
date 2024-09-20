@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="shortcut icon" href="static/images/icon.png">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/images/icon.png" alt="Umoja Logo">
+            <h1>Umoja Inventory System</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <form id="loginForm" method="POST" action="/login">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="register-account">
+            <p>Don't have an account? <a href="/templates/register.html">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>

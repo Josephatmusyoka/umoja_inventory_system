@@ -3,25 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Umoja Inventory System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h2>Register</h2>
-        <form action="{{ url_for('register') }}" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+        <header>
+            <div class="header-content">
+                <img src="/static/images/icon.png" alt="Umoja Logo" class="logo">
+                <h1>UMOJA INVENTORY SYSTEM</h1>
+                <p>Welcome to Umoja Fashion Collection</p>
+            </div>
+        </header>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <div class="form-container">
+            <h2>Create Account</h2>
+            <form action="/submit_registration" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <select name="title" id="title">
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Dr.">Dr.</option>
+                    </select>
+                </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
 
-            <button type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+                <div class="form-group">
+                    <label for="second_name">Second Name</label>
+                    <input type="text" id="second_name" name="second_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="phone-input">
+                        <select id="country_code" name="country_code">
+                            <option value="+254">🇰🇪 +254</option>
+                            <option value="+1">🇺🇸 +1</option>
+                            <!-- Add more country codes as needed -->
+                        </select>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile_picture">Profile Picture</label>
+                    <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select name="role" id="role">
+                        <option value="customer">Customer</option>
+                        <option value="admin">Admin</option>
+                        <option value="supplier">Supplier</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+            <div class="already-account">
+                <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+            </div>
+        </div>
     </div>
+<script src="/static/js/register.js"></script>
 </body>
 </html>

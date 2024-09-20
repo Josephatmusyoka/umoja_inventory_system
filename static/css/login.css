@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1a8f4d, #4da6ff);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header .logo img {
+    width: 100px; /* Adjust logo size as needed */
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+select, input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="file"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4da6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3b8bd3;
+}
+
+.already-account, .register-account {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.already-account a, .register-account a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+.already-account a:hover, .register-account a:hover {
+    text-decoration: underline;
+}
